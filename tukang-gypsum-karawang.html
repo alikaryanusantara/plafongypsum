@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>081297027100 Tukang Gypsum Karawang: Jasa Profesional Ali Karya Nusantara</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gaya dasar untuk konsistensi */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa; /* Latar belakang off-white yang lebih cerah */
+        }
+        .container-wrapper {
+            padding: 20px; /* Padding di sekitar container utama */
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto; /* Tengah di halaman */
+            padding: 30px; /* Padding di dalam container */
+            background-color: #ffffff;
+            border-radius: 16px; /* Sudut lebih melengkung */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Bayangan lebih dalam */
+            transition: transform 0.3s ease-in-out;
+        }
+        .main-container:hover {
+            transform: translateY(-5px); /* Efek melayang saat di-hover */
+        }
+
+        h1, h2, h3, h4 {
+            color: #2c3e50; /* Warna judul */
+            font-weight: 700; /* Tebal untuk judul */
+            margin-top: 2em; /* Spasi atas lebih besar */
+            margin-bottom: 0.8em;
+        }
+        h1 { font-size: 3rem; } /* Lebih besar untuk judul utama */
+        h2 { font-size: 2.4rem; }
+        h3 { font-size: 1.9rem; }
+        h4 { font-size: 1.5rem; }
+
+        p {
+            font-size: 1.05rem; /* Ukuran paragraf sedikit lebih besar */
+            line-height: 1.8; /* Line height lebih nyaman */
+            margin-bottom: 1.2rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 28px; /* Indentasi bullet points */
+            margin-bottom: 1.8em; /* Spasi bawah lebih besar */
+        }
+        ul li {
+            margin-bottom: 0.8rem; /* Spasi antar item daftar */
+            line-height: 1.6;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Gaya Header Gradasi (Mirip Screenshot 4) */
+        .hero-header {
+            background: linear-gradient(to right, #4a90e2, #6b52e3); /* Gradasi biru ke ungu */
+            color: white;
+            padding: 45px 30px; /* Padding lebih besar */
+            border-radius: 16px; /* Sudut lebih melengkung */
+            text-align: center;
+            margin-bottom: 40px; /* Jarak bawah lebih besar */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Bayangan kuat dan dalam */
+            transform: translateY(-10px); /* Sedikit naik untuk efek hero */
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero-header:hover {
+            transform: translateY(-15px); /* Efek melayang saat di-hover */
+        }
+        .hero-header h1 {
+            color: white;
+            font-size: 3rem; /* Ukuran judul di header */
+            font-weight: 900; /* Lebih tebal */
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+        }
+        .hero-header p {
+            color: #e0e7ff; /* Warna sub-judul yang lebih terang */
+            font-size: 1.3rem;
+            font-weight: 400; /* Lebih tipis */
+            margin-bottom: 0;
+        }
+
+        /* Gaya Gambar Artikel */
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Bayangan lebih jelas */
+            transition: transform 0.3s ease-in-out;
+        }
+        .article-image:hover {
+            transform: scale(1.02); /* Sedikit zoom saat di-hover */
+        }
+
+        /* Gaya Kotak Fitur (Mirip Screenshot 2) */
+        .feature-box {
+            background-color: #ffffff;
+            padding: 32px; /* Padding lebih besar */
+            border-radius: 12px; /* Sudut lebih melengkung */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+            border-left: 6px solid #3498db; /* Garis biru di kiri lebih tebal */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            transition: all 0.3s ease-in-out;
+            min-height: 180px; /* Tinggi minimum untuk konsistensi */
+        }
+        .feature-box:hover {
+            transform: translateY(-5px); /* Efek melayang saat di-hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat saat hover */
+        }
+        .feature-box h4 {
+            font-size: 1.35rem; /* Ukuran font judul kotak lebih besar */
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .feature-box p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Gaya Testimoni */
+        .testimonial-box {
+            background-color: #e8f0fe; /* Latar belakang biru muda lembut */
+            padding: 25px;
+            border-left: 8px solid #3498db; /* Garis biru lebih tebal */
+            margin-bottom: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out;
+        }
+        .testimonial-box:hover {
+            transform: scale(1.01); /* Sedikit zoom saat di-hover */
+        }
+        .testimonial-box p {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 700;
+            text-align: right;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+
+        /* Gaya Tombol Call to Action */
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745; /* Hijau */
+            color: white;
+            padding: 18px 35px; /* Padding lebih besar */
+            border-radius: 10px; /* Sudut lebih melengkung */
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem; /* Ukuran font lebih besar */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 25px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px); /* Efek melayang lebih jelas */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Bayangan lebih kuat saat hover */
+        }
+
+        /* Responsivitas dasar untuk konten di dalam container */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 15px;
+                border-radius: 10px;
+            }
+            .hero-header {
+                padding: 30px 20px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+            .hero-header h1 {
+                font-size: 2.2rem;
+            }
+            .hero-header p {
+                font-size: 1.1rem;
+            }
+            .feature-box {
+                padding: 20px;
+                min-height: unset; /* Hapus min-height di mobile */
+            }
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.7rem; }
+            h4 { font-size: 1.3rem; }
+            p { font-size: 0.95rem; }
+            ul { margin-left: 20px; }
+            .cta-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container-wrapper">
+        <div class="main-container">
+            <!-- Bagian header yang dimodifikasi sesuai contoh desain (Screenshot 4) -->
+            <div class="hero-header">
+                <h1>Mencari Jasa Tukang Gypsum Karawang Terbaik? Ali Karya Nusantara Solusinya!</h1>
+                <p>Wujudkan Interior Impian Anda dengan Plafon & Partisi Gypsum Berkualitas di Karawang</p>
+            </div>
+            <!-- Akhir bagian header yang dimodifikasi -->
+
+            <p>Apakah Anda sedang merencanakan renovasi atau pembangunan di wilayah Karawang dan membutuhkan <strong class="text-blue-600">tukang gypsum Karawang</strong> yang ahli dan dapat diandalkan? Ali Karya Nusantara hadir untuk menjawab kebutuhan Anda. Sebagai penyedia jasa gypsum profesional, kami berdedikasi menciptakan keindahan dan fungsionalitas ruang melalui pemasangan plafon, partisi, dan berbagai elemen gypsum lainnya dengan standar kualitas tertinggi dan desain yang inovatif. Kami memahami bahwa setiap detail kecil sangat berarti untuk hasil akhir yang memukau.</p>
+
+            <!-- Placeholder untuk Gambar -->
+            <div class="text-center">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje2xoJ1lMcIArOjdvV5gtjfw0dQZONNsUQo0xurZFjpZpFTFsQYQD3N7KfpT65d369Nxph1v-g4UUrmHg4Q742Jqp1T271F8Xx2hSkNhRqlneK0m3VATdp3PUV1x3ZL0ZVa1L8QQ9KAmW8KqXtash2_gjWJisQoiVZcRjxXHJP5veMQPTm2DE3rBzua8rU/s1472/tukang%20gypsum%20plafon%20partisi.jpg"
+                     alt="Contoh Hasil Pekerjaan Gypsum oleh Ali Karya Nusantara di Karawang"
+                     class="article-image mx-auto">
+                <p class="text-sm text-gray-500 mt-2">Gambar: Hasil karya profesional Ali Karya Nusantara di Karawang.</p>
+            </div>
+            <!-- Akhir Placeholder Gambar -->
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Mengapa Ali Karya Nusantara Adalah Pilihan Utama Anda di Karawang?</h2>
+            <!-- Bagian "Mengapa Memilih Kami" yang dimodifikasi menjadi grid (Screenshot 2) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="feature-box">
+                    <h4>Dedikasi Profesionalisme & Keahlian Teknis</h4>
+                    <p>Tim kami terdiri dari para tukang gypsum yang tidak hanya berpengalaman luas, tetapi juga memiliki keahlian teknis mumpuni dalam berbagai metode pemasangan dan finishing gypsum. Kami memastikan setiap pekerjaan dilakukan dengan presisi, efisiensi, dan hasil akhir yang sempurna.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Komitmen pada Kualitas Material Premium</h4>
+                    <p>Kami hanya menggunakan bahan gypsum pilihan dengan kualitas terbaik, menjamin durabilitas dan estetika jangka panjang. Penggunaan material superior ini juga memastikan keamanan dan kenyamanan bagi penghuni rumah atau kantor Anda.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Penawaran Harga yang Kompetitif & Transparan</h4>
+                    <p>Dapatkan estimasi biaya yang jelas dan adil tanpa ada biaya tersembunyi. Kami menyediakan layanan berkualitas tinggi dengan harga yang sangat bersaing, memberikan nilai maksimal untuk setiap investasi yang Anda tanamkan pada properti Anda.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Jaminan Kepuasan Pelanggan dengan Garansi Pengerjaan</h4>
+                    <p>Kepercayaan Anda adalah prioritas kami. Oleh karena itu, setiap proyek yang kami tangani disertai dengan garansi pengerjaan, memastikan Anda mendapatkan ketenangan pikiran dan hasil yang sesuai harapan, bahkan melebihi ekspektasi.</p>
+                </div>
+            </div>
+            <!-- Akhir Bagian "Mengapa Memilih Kami" -->
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Ragam Layanan Gypsum Unggulan Kami di Karawang</h2>
+            <ul class="list-disc ml-6 mb-4 service-list">
+                <li><strong class="text-blue-600">Pemasangan Plafon Gypsum Modern:</strong> Menciptakan langit-langit yang mulus dan estetik dengan berbagai model, dari minimalis hingga desain kontemporer.</li>
+                <li><strong class="text-blue-600">Pembuatan Partisi Gypsum Fungsional:</strong> Solusi pembatas ruangan yang fleksibel dan rapi, ideal untuk efisiensi tata ruang.</li>
+                <li><strong class="text-blue-600">Desain Drop Ceiling & Plafon Akustik:</strong> Meningkatkan estetika dan kenyamanan akustik ruangan dengan desain plafon bertingkat atau khusus.</li>
+                <li><strong class="text-blue-600">Aplikasi Lis Profil & Ornamen Gypsum:</strong> Menambah detail artistik dan sentuhan kemewahan pada sudut dinding dan plafon.</li>
+                <li><strong class="text-blue-600">Kreasi Dekorasi Gypsum Kustom:</strong> Merealisasikan ide dekorasi gypsum unik sesuai keinginan dan gaya interior Anda.</li>
+                <li><strong class="text-blue-600">Layanan Perbaikan & Restorasi Gypsum:</strong> Mengembalikan kondisi gypsum yang rusak atau kusam agar terlihat seperti baru kembali.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Proses Kerja Kami: Cepat, Efisien, dan Terpercaya</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">Diskusi Awal & Pemahaman Kebutuhan:</strong> Kami mendengarkan secara seksama visi dan kebutuhan Anda, serta memberikan konsultasi awal yang informatif.</li>
+                <li><strong class="text-blue-600">Survei Lokasi & Pengukuran Detail:</strong> Tim kami akan mengunjungi lokasi untuk melakukan pengukuran yang presisi dan menilai kondisi teknis.</li>
+                <li><strong class="text-blue-600">Penyusunan Penawaran Terperinci:</strong> Berdasarkan data survei, kami menyajikan proposal penawaran yang lengkap dan transparan.</li>
+                <li><strong class="text-blue-600">Pelaksanaan Proyek dengan Standar Tinggi:</strong> Pengerjaan dilakukan oleh tenaga ahli kami dengan mematuhi jadwal dan standar kualitas yang disepakati.</li>
+                <li><strong class="text-blue-600">Pemeriksaan Kualitas Menyeluruh:</strong> Sebelum serah terima, kami melakukan inspeksi ketat untuk memastikan tidak ada celah kekurangan.</li>
+                <li><strong class="text-blue-600">Serah Terima & Dukungan Purna Jual:</strong> Proyek diserahkan setelah Anda puas sepenuhnya, diikuti dengan dukungan purna jual jika diperlukan.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Jangkauan Layanan Kami Sebagai Tukang Gypsum di Wilayah Karawang</h2>
+            <p class="mb-4">Sebagai <strong class="text-blue-600">tukang gypsum Karawang</strong> yang siap sedia, Ali Karya Nusantara melayani berbagai lokasi strategis di sekitar Karawang:</p>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Karawang Kota</li>
+                <li>Cikampek</li>
+                <li>Telukjambe Timur & Barat</li>
+                <li>Klari</li>
+                <li>Dan area-area lainnya di Kabupaten Karawang dan sekitarnya</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Panduan Memilih Jasa Tukang Gypsum Profesional</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Periksa rekam jejak dan portofolio proyek yang pernah dikerjakan.</li>
+                <li>Verifikasi kualitas material yang akan digunakan.</li>
+                <li>Pastikan adanya garansi untuk pekerjaan yang dilakukan.</li>
+                <li>Bandingkan penawaran dari beberapa penyedia jasa untuk nilai terbaik.</li>
+                <li>Cari ulasan atau testimoni dari klien sebelumnya.</li>
+                <li>Pastikan ada kesepakatan tertulis atau kontrak kerja yang jelas.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Pertanyaan Sering Diajukan (FAQ) tentang Jasa Gypsum</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">Berapa rata-rata waktu pengerjaan plafon gypsum?</strong><br>Durasi pemasangan plafon gypsum bervariasi. Untuk ukuran ruangan standar, pengerjaan dapat selesai dalam 3 hingga 7 hari kerja, tergantung kompleksitas desain.</li>
+                <li><strong class="text-blue-600">Apakah gypsum bisa digunakan di area lembab seperti kamar mandi?</strong><br>Gypsum standar kurang cocok untuk area basah. Namun, kami menawarkan gypsum *water resistant* khusus yang didesain untuk area lembab seperti kamar mandi atau dapur.</li>
+                <li><strong class="text-blue-600">Bagaimana cara mendapatkan penawaran harga dari Ali Karya Nusantara?</strong><br>Sangat mudah! Cukup hubungi kami melalui kontak yang tersedia di bawah, dan kami akan menjadwalkan konsultasi serta survei lokasi untuk memberikan penawaran harga terbaik.</li>
+                <li><strong class="text-blue-600">Apakah layanan Anda mencakup perbaikan gypsum yang sudah ada?</strong><br>Ya, tentu saja! Selain pemasangan baru, kami juga menyediakan layanan perbaikan dan renovasi untuk gypsum yang retak, berlubang, atau rusak akibat kelembaban.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Testimoni dari Klien Kami di Karawang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="testimonial-box">
+                    <p>"Pengerjaan plafon di kantor kami di Karawang sangat rapi dan cepat oleh tim Ali Karya Nusantara. Hasilnya benar-benar memuaskan dan sesuai harapan. Sangat direkomendasikan!"</p>
+                    <p class="testimonial-author">- Bapak Rio, Pengusaha di Karawang</p>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Ali Karya Nusantara membantu kami membuat partisi di rumah. Mereka sangat profesional, tepat waktu, dan hasilnya bagus sekali. Terima kasih!"</p>
+                    <p class="testimonial-author">- Ibu Siti, Warga Karawang</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 text-center">Siap Mewujudkan Desain Gypsum Impian Anda di Karawang?</h2>
+            <p class="text-center mb-4">Jangan ragu lagi! Hubungi **Ali Karya Nusantara** sekarang untuk mendapatkan konsultasi gratis dan penawaran terbaik untuk proyek gypsum Anda di Karawang. Kami berkomitmen untuk memberikan layanan terbaik dengan hasil yang memuaskan dan harga yang bersahabat.</p>
+
+            <div class="text-center mb-6 flex flex-col items-center">
+                <a href="mailto:alikaryanusantara@gmail.com" class="cta-button">Email Kami: alikaryanusantara@gmail.com</a>
+                <a href="tel:+6281297027100" class="cta-button mt-4">Telepon Kami: 081297027100</a>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Kesimpulan Akhir</h2>
+            <p class="mb-4">Sebagai <strong class="text-blue-600">tukang gypsum Karawang</strong> terkemuka, Ali Karya Nusantara adalah pilihan ideal bagi Anda yang mengutamakan kualitas, profesionalisme, dan hasil yang presisi. Dengan dedikasi terhadap kepuasan pelanggan dan penggunaan material terbaik, kami siap menjadi partner terpercaya Anda dalam memperindah setiap sudut properti Anda di Karawang. Hubungi kami hari ini dan rasakan bedanya!</p>
+        </div>
+    </div>
+</body>
+</html>
