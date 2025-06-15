@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>081297027100 Tukang Gypsum Cibubur Jakarta Timur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gaya dasar untuk konsistensi */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa; /* Latar belakang off-white yang lebih cerah */
+        }
+        .container-wrapper {
+            padding: 16px; /* Padding sedikit lebih kecil di sekitar container utama untuk mobile */
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto; /* Tengah di halaman */
+            padding: 24px; /* Padding sedikit lebih kecil di dalam container untuk mobile */
+            background-color: #ffffff;
+            border-radius: 16px; /* Sudut lebih melengkung */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Bayangan lebih dalam */
+            transition: transform 0.3s ease-in-out;
+        }
+        .main-container:hover {
+            transform: translateY(-5px); /* Efek melayang saat di-hover */
+        }
+
+        h1, h2, h3, h4 {
+            color: #2c3e50; /* Warna judul */
+            font-weight: 700; /* Tebal untuk judul */
+            margin-top: 1.8em; /* Spasi atas sedikit lebih kecil */
+            margin-bottom: 0.7em; /* Spasi bawah sedikit lebih kecil */
+        }
+        h1 { font-size: 2.5rem; } /* Ukuran sedikit disesuaikan untuk desktop */
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.7rem; }
+        h4 { font-size: 1.4rem; }
+
+        p {
+            font-size: 1rem; /* Ukuran paragraf standar */
+            line-height: 1.7; /* Line height lebih nyaman */
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px; /* Indentasi bullet points */
+            margin-bottom: 1.5em; /* Spasi bawah lebih besar */
+        }
+        ul li {
+            margin-bottom: 0.6rem; /* Spasi antar item daftar sedikit lebih rapat */
+            line-height: 1.5;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Gaya Header Gradasi */
+        .hero-header {
+            background: linear-gradient(to right, #4a90e2, #6b52e3); /* Gradasi biru ke ungu */
+            color: white;
+            padding: 35px 20px; /* Padding sedikit lebih kecil untuk mobile */
+            border-radius: 16px; /* Sudut lebih melengkung */
+            text-align: center;
+            margin-bottom: 30px; /* Jarak bawah lebih kecil */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28); /* Bayangan kuat dan dalam */
+            transform: translateY(-8px); /* Sedikit naik untuk efek hero */
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero-header:hover {
+            transform: translateY(-12px); /* Efek melayang saat di-hover */
+        }
+        .hero-header h1 {
+            color: white;
+            font-size: 2.2rem; /* Ukuran judul di header */
+            font-weight: 800; /* Lebih tebal */
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+        }
+        .hero-header p {
+            color: #e0e7ff; /* Warna sub-judul yang lebih terang */
+            font-size: 1rem; /* Ukuran font lebih kecil untuk mobile */
+            font-weight: 400; /* Lebih tipis */
+            margin-bottom: 0;
+        }
+
+        /* Gaya Gambar Artikel */
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih jelas */
+            transition: transform 0.3s ease-in-out;
+        }
+        .article-image:hover {
+            transform: scale(1.01); /* Sedikit zoom saat di-hover */
+        }
+
+        /* Gaya Kotak Fitur */
+        .feature-box {
+            background-color: #ffffff;
+            padding: 24px; /* Padding sedikit lebih kecil */
+            border-radius: 12px; /* Sudut lebih melengkung */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+            border-left: 5px solid #3498db; /* Garis biru di kiri lebih tebal */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            transition: all 0.3s ease-in-out;
+            min-height: unset; /* Hapus min-height di mobile, biarkan konten menentukan */
+        }
+        .feature-box:hover {
+            transform: translateY(-3px); /* Efek melayang saat di-hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Bayangan lebih kuat saat hover */
+        }
+        .feature-box h4 {
+            font-size: 1.2rem; /* Ukuran font judul kotak lebih kecil */
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .feature-box p {
+            font-size: 0.9rem; /* Ukuran font paragraf kotak lebih kecil */
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Gaya Testimoni */
+        .testimonial-box {
+            background-color: #e8f0fe; /* Latar belakang biru muda lembut */
+            padding: 20px; /* Padding sedikit lebih kecil */
+            border-left: 6px solid #3498db; /* Garis biru lebih tebal */
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-style: italic;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease-in-out;
+        }
+        .testimonial-box:hover {
+            transform: scale(1.005); /* Sedikit zoom saat di-hover */
+        }
+        .testimonial-box p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 700;
+            text-align: right;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+
+        /* Gaya Tombol Call to Action */
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745; /* Hijau */
+            color: white;
+            padding: 14px 28px; /* Padding lebih kecil */
+            border-radius: 8px; /* Sudut sedikit lebih kecil */
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem; /* Ukuran font sedikit lebih kecil */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px); /* Efek melayang lebih jelas */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat saat hover */
+        }
+
+        /* Responsivitas yang ditingkatkan untuk layar kecil (mobile) */
+        @media (max-width: 768px) {
+            .container-wrapper {
+                padding: 10px; /* Padding lebih kecil lagi */
+            }
+            .main-container {
+                padding: 15px; /* Padding utama lebih kecil */
+                border-radius: 12px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+            .hero-header {
+                padding: 25px 15px; /* Padding header lebih kecil */
+                border-radius: 10px;
+                margin-bottom: 25px;
+                transform: translateY(0); /* Hapus efek naik di mobile */
+            }
+            .hero-header:hover {
+                 transform: translateY(0); /* Hapus efek hover di mobile */
+            }
+            .hero-header h1 {
+                font-size: 1.8rem; /* Ukuran judul header lebih kecil */
+                line-height: 1.3;
+            }
+            .hero-header p {
+                font-size: 0.9rem; /* Ukuran sub-judul header lebih kecil */
+            }
+            h1 { font-size: 2rem; } /* Ukuran judul H1 normal di mobile */
+            h2 { font-size: 1.7rem; } /* Ukuran judul H2 normal di mobile */
+            h3 { font-size: 1.4rem; } /* Ukuran judul H3 normal di mobile */
+            h4 { font-size: 1.2rem; } /* Ukuran judul H4 normal di mobile */
+            p { font-size: 0.9rem; } /* Ukuran paragraf normal di mobile */
+            ul { margin-left: 15px; } /* Indentasi daftar lebih kecil */
+            ul li { margin-bottom: 0.5rem; } /* Spasi antar item daftar lebih kecil */
+            .feature-box {
+                padding: 18px; /* Padding kotak fitur lebih kecil */
+                border-radius: 8px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+                transform: translateY(0); /* Hapus efek hover di mobile */
+            }
+            .feature-box:hover {
+                transform: translateY(0); /* Hapus efek hover di mobile */
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Kembalikan bayangan normal */
+            }
+            .feature-box h4 {
+                font-size: 1.1rem;
+            }
+            .feature-box p {
+                font-size: 0.85rem;
+            }
+            .testimonial-box {
+                padding: 18px; /* Padding testimoni lebih kecil */
+                margin-bottom: 15px;
+                border-radius: 8px;
+                transform: scale(1); /* Hapus efek hover di mobile */
+            }
+            .testimonial-box:hover {
+                transform: scale(1); /* Hapus efek hover di mobile */
+            }
+            .testimonial-box p {
+                font-size: 0.9rem;
+            }
+            .testimonial-author {
+                font-size: 0.85rem;
+            }
+            .cta-button {
+                font-size: 0.95rem; /* Ukuran font tombol lebih kecil */
+                padding: 10px 20px; /* Padding tombol lebih kecil */
+                margin-top: 15px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(0); /* Hapus efek hover di mobile */
+            }
+             .cta-button:hover {
+                transform: translateY(0); /* Hapus efek hover di mobile */
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Kembalikan bayangan normal */
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Pastikan grid menjadi 1 kolom di mobile */
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container-wrapper">
+        <div class="main-container">
+            <!-- Bagian header -->
+            <div class="hero-header">
+                <h1>Tukang Gypsum Cibubur Jakarta Timur: Jasa Profesional Ali Karya Nusantara</h1>
+                <p>Solusi Terbaik untuk Kebutuhan Plafon & Partisi Gypsum Anda di Cibubur</p>
+            </div>
+            <!-- Akhir bagian header -->
+
+            <p>Mencari <strong class="text-blue-600">tukang gypsum di Cibubur Jakarta Timur</strong> yang ahli, profesional, dan terpercaya? **Ali Karya Nusantara** adalah pilihan yang tepat untuk mewujudkan interior impian Anda. Kami menyediakan layanan lengkap pemasangan dan perbaikan plafon gypsum, partisi, serta berbagai dekorasi gypsum dengan kualitas terbaik dan sentuhan desain modern. Komitmen kami adalah memberikan hasil kerja yang rapi, kuat, dan estetis di setiap proyek di wilayah Cibubur dan sekitarnya.</p>
+
+            <!-- Placeholder untuk Gambar -->
+            <div class="text-center">
+                <img src="https://placehold.co/800x450/4a90e2/ffffff?text=Proyek+Gypsum+Cibubur"
+                     alt="Contoh Hasil Pekerjaan Gypsum oleh Ali Karya Nusantara di Cibubur"
+                     class="article-image mx-auto">
+                <p class="text-sm text-gray-500 mt-2">Gambar: Sentuhan profesional Ali Karya Nusantara untuk rumah dan kantor Anda di Cibubur.</p>
+            </div>
+            <!-- Akhir Placeholder Gambar -->
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Mengapa Ali Karya Nusantara Pilihan Utama untuk Gypsum di Cibubur?</h2>
+            <!-- Bagian "Mengapa Memilih Kami" -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="feature-box">
+                    <h4>Ahli & Berpengalaman di Wilayah Cibubur</h4>
+                    <p>Tim kami memiliki pengalaman bertahun-tahun dalam menangani proyek gypsum di berbagai jenis properti di area Cibubur dan Jakarta Timur. Kami memahami karakteristik dan kebutuhan pasar lokal.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Kualitas Material Terjamin</h4>
+                    <p>Kami hanya menggunakan material gypsum berkualitas premium yang menjamin ketahanan, keamanan, dan keindahan jangka panjang untuk setiap pemasangan. Investasi Anda akan bertahan lama.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Harga Bersaing & Transparan</h4>
+                    <p>Dapatkan penawaran harga yang jelas, kompetitif, dan tanpa biaya tersembunyi. Kami berkomitmen untuk memberikan layanan terbaik dengan nilai yang optimal sesuai anggaran Anda.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Garansi Pekerjaan & Kepuasan Pelanggan</h4>
+                    <p>Setiap proyek dilengkapi dengan garansi untuk memastikan Anda sepenuhnya puas dengan hasil akhir. Kepuasan klien adalah prioritas utama Ali Karya Nusantara.</p>
+                </div>
+            </div>
+            <!-- Akhir Bagian "Mengapa Memilih Kami" -->
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Layanan Pemasangan Gypsum Komprehensif di Cibubur</h2>
+            <ul class="list-disc ml-6 mb-4 service-list">
+                <li><strong class="text-blue-600">Plafon Gypsum:</strong> Berbagai desain plafon gypsum modern, minimalis, dan fungsional untuk hunian maupun komersial.</li>
+                <li><strong class="text-blue-600">Partisi Gypsum:</strong> Pembuatan sekat ruangan yang rapi, kokoh, dan efisien untuk optimalisasi tata ruang.</li>
+                <li><strong class="text-blue-600">Drop Ceiling:</strong> Desain plafon bertingkat untuk menambah nilai estetika dan menciptakan efek pencahayaan unik.</li>
+                <li><strong class="text-blue-600">Lis & Ornamen Gypsum:</strong> Penambahan detail profil dan ornamen gypsum untuk sentuhan elegan pada interior.</li>
+                <li><strong class="text-blue-600">Dekorasi Gypsum Kustom:</strong> Menerima pesanan dekorasi gypsum dengan desain khusus sesuai keinginan Anda.</li>
+                <li><strong class="text-blue-600">Perbaikan & Renovasi Gypsum:</strong> Layanan profesional untuk perbaikan gypsum yang rusak, retak, atau membutuhkan renovasi total.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Proses Kerja Ali Karya Nusantara di Cibubur</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">1. Konsultasi & Penjadwalan Survei:</strong> Hubungi kami untuk diskusi awal dan penjadwalan survei gratis di lokasi Anda.</li>
+                <li><strong class="text-blue-600">2. Survei Lokasi & Pengukuran Akurat:</strong> Tim kami akan melakukan survei detail dan pengukuran presisi untuk perencanaan yang matang.</li>
+                <li><strong class="text-blue-600">3. Penawaran Transparan:</strong> Anda akan menerima penawaran harga yang jelas dan terperinci, disesuaikan dengan kebutuhan proyek Anda.</li>
+                <li><strong class="text-blue-600">4. Pengerjaan Cepat & Profesional:</strong> Pelaksanaan pekerjaan dilakukan oleh tim ahli dengan efisiensi dan standar kualitas tinggi.</li>
+                <li><strong class="text-blue-600">5. Kontrol Kualitas & Finishing:</strong> Kami memastikan setiap detail sempurna dan hasil akhir memenuhi ekspektasi Anda.</li>
+                <li><strong class="text-blue-600">6. Serah Terima & Layanan Purna Jual:</strong> Proyek diserahkan setelah Anda puas, dilengkapi dengan dukungan purna jual.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Jangkauan Layanan Tukang Gypsum Kami di Cibubur Jakarta Timur</h2>
+            <p class="mb-4">Sebagai <strong class="text-blue-600">tukang gypsum Cibubur Jakarta Timur</strong>, kami siap melayani area-area berikut:</p>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Cibubur</li>
+                <li>Ciracas</li>
+                <li>Cipayung</li>
+                <li>Pasar Rebo</li>
+                <li>Kramat Jati</li>
+                <li>Makasar</li>
+                <li>Cilangkap</li>
+                <li>Dan seluruh wilayah Jakarta Timur</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Tips Memilih Tukang Gypsum di Cibubur</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Periksa portofolio dan referensi pekerjaan sebelumnya.</li>
+                <li>Pastikan adanya garansi untuk pekerjaan yang diberikan.</li>
+                <li>Diskusikan material yang akan digunakan dan kualitasnya.</li>
+                <li>Bandingkan beberapa penawaran untuk mendapatkan nilai terbaik.</li>
+                <li>Baca ulasan dan testimoni dari pelanggan sebelumnya.</li>
+                <li>Pastikan ada kontrak kerja yang jelas dan terperinci.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Pertanyaan Sering Diajukan (FAQ) tentang Jasa Gypsum di Cibubur</h2>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">Berapa biaya rata-rata pemasangan gypsum di Cibubur?</strong><br>Biaya bervariasi tergantung jenis pekerjaan, desain, dan material. Silakan hubungi kami untuk survei dan penawaran gratis.</li>
+                <li><strong class="text-blue-600">Apakah Ali Karya Nusantara melayani perbaikan plafon gypsum yang rusak?</strong><br>Ya, kami menyediakan layanan lengkap, termasuk perbaikan dan renovasi plafon atau partisi gypsum yang rusak.</li>
+                <li><strong class="text-blue-600">Apakah saya perlu menyediakan material sendiri?</strong><br>Tidak perlu. Kami menyediakan material berkualitas tinggi sebagai bagian dari layanan kami, namun kami juga fleksibel jika Anda memiliki preferensi material tertentu.</li>
+                <li><strong class="text-blue-600">Bagaimana cara memesan jasa tukang gypsum Anda?</strong><br>Anda bisa menghubungi kami melalui email atau telepon yang tertera di bawah. Tim kami siap merespons dengan cepat.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Testimoni dari Klien Kami di Cibubur & Jakarta Timur</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="testimonial-box">
+                    <p>"Pemasangan plafon di rumah kami di Cibubur sangat rapi dan sesuai ekspektasi. Ali Karya Nusantara sangat profesional dan hasilnya memuaskan. Terima kasih!"</p>
+                    <p class="testimonial-author">- Ibu Rina, Warga Cibubur</p>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Kami sangat senang dengan partisi gypsum yang dikerjakan Ali Karya Nusantara di kantor kami di Jakarta Timur. Cepat, bersih, dan berkualitas. Recommended!"</p>
+                    <p class="testimonial-author">- Bapak David, Pengusaha di Jakarta Timur</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 text-center">Siap Mewujudkan Desain Gypsum Impian Anda di Cibubur Jakarta Timur?</h2>
+            <p class="text-center mb-4">Jangan ragu lagi! Hubungi **Ali Karya Nusantara** sekarang untuk mendapatkan konsultasi gratis dan penawaran terbaik untuk proyek gypsum Anda di Cibubur Jakarta Timur. Kami berkomitmen untuk memberikan layanan terbaik dengan hasil yang memuaskan dan harga yang bersahabat.</p>
+
+            <div class="text-center mb-6 flex flex-col items-center">
+                <a href="mailto:alikaryanusantara@gmail.com" class="cta-button">Email Kami: alikaryanusantara@gmail.com</a>
+                <a href="tel:+6281297027100" class="cta-button mt-4">Telepon Kami: 081297027100</a>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Kesimpulan Akhir</h2>
+            <p class="mb-4">Sebagai <strong class="text-blue-600">tukang gypsum Cibubur Jakarta Timur</strong> yang terkemuka, Ali Karya Nusantara adalah pilihan ideal bagi Anda yang mengutamakan kualitas, profesionalisme, dan hasil yang presisi. Dengan dedikasi terhadap kepuasan pelanggan dan penggunaan material terbaik, kami siap menjadi partner terpercaya Anda dalam memperindah setiap sudut properti Anda. Hubungi kami hari ini dan rasakan bedanya!</p>
+        </div>
+    </div>
+</body>
+</html>
