@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tukang Gypsum Terdekat: Jasa Profesional Ali Karya Nusantara</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gaya dasar untuk konsistensi */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f0f2f5; /* Latar belakang abu-abu muda */
+        }
+        .container-wrapper {
+            padding: 20px; /* Padding di sekitar container utama */
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto; /* Tengah di halaman */
+            padding: 30px; /* Padding di dalam container */
+            background-color: #ffffff;
+            border-radius: 12px; /* Sudut lebih melengkung */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Bayangan lebih jelas */
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50; /* Warna judul */
+            font-weight: 700; /* Tebal untuk judul */
+            margin-top: 1.8em;
+            margin-bottom: 0.8em;
+        }
+        h1 { font-size: 2.8rem; } /* Lebih besar untuk judul utama */
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px; /* Indentasi bullet points */
+            margin-bottom: 1.5em;
+        }
+        ul li {
+            margin-bottom: 0.75rem; /* Spasi antar item daftar */
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Gaya Header Gradasi (Mirip Screenshot 4) */
+        .hero-header {
+            background: linear-gradient(to right, #3498db, #8e44ad); /* Gradasi biru ke ungu tua */
+            color: white;
+            padding: 40px 25px; /* Padding lebih besar */
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 35px; /* Jarak bawah */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Bayangan kuat */
+        }
+        .hero-header h1 {
+            color: white;
+            font-size: 2.6rem; /* Ukuran judul di header */
+            font-weight: 800; /* Lebih tebal */
+            margin-bottom: 10px;
+        }
+        .hero-header p {
+            color: #ecf0f1; /* Sedikit abu-abu untuk sub-judul */
+            font-size: 1.15rem;
+            font-weight: 300; /* Lebih tipis */
+            margin-bottom: 0;
+        }
+
+        /* Gaya Gambar Artikel */
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gaya Kotak Fitur (Mirip Screenshot 2) */
+        .feature-box {
+            background-color: #ffffff;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+            border-left: 5px solid #3498db; /* Garis biru di kiri */
+            display: flex; /* Untuk ikon/teks di samping */
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .feature-box h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .feature-box p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Gaya Testimoni */
+        .testimonial-box {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-left: 6px solid #3498db;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        .testimonial-box p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            text-align: right;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+
+        /* Gaya Tombol Call to Action */
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745; /* Hijau */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px); /* Efek melayang */
+        }
+
+        /* Responsivitas dasar untuk konten di dalam container */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 15px;
+            }
+            .hero-header h1 {
+                font-size: 2rem;
+            }
+            .hero-header p {
+                font-size: 1rem;
+            }
+            .feature-box {
+                padding: 20px;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.5rem; }
+            h4 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container-wrapper">
+        <div class="main-container">
+            <!-- Bagian header yang dimodifikasi sesuai contoh desain (Screenshot 4) -->
+            <div class="hero-header">
+                <h1>Tukang Gypsum Terdekat: Jasa Profesional Ali Karya Nusantara</h1>
+                <p>Solusi Terbaik untuk Kebutuhan Plafon & Partisi Gypsum Anda</p>
+            </div>
+            <!-- Akhir bagian header yang dimodifikasi -->
+
+            <p>Mencari <strong class="text-blue-600">tukang gypsum terdekat</strong> yang profesional dan terpercaya? Ali Karya Nusantara hadir sebagai solusi terbaik untuk kebutuhan pemasangan gypsum di rumah atau kantor Anda. Dengan pengalaman bertahun-tahun dalam industri konstruksi, kami menawarkan layanan pemasangan plafon gypsum, partisi, dan berbagai dekorasi gypsum dengan kualitas premium dan harga yang kompetitif.</p>
+
+            <!-- Placeholder untuk Gambar -->
+            <div class="text-center">
+                <img src="https://placehold.co/800x450/4a90e2/ffffff?text=Contoh+Pekerjaan+Gypsum"
+                     alt="Contoh Hasil Pekerjaan Gypsum oleh Ali Karya Nusantara"
+                     class="article-image mx-auto">
+                <p class="text-sm text-gray-500 mt-2">Anda bisa mengganti gambar placeholder ini dengan foto proyek Anda yang sebenarnya.</p>
+            </div>
+            <!-- Akhir Placeholder Gambar -->
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Jasa Pemasangan Gypsum Profesional oleh Ali Karya Nusantara</h2>
+
+            <!-- Bagian "Mengapa Memilih Kami" yang dimodifikasi menjadi grid (Screenshot 2) -->
+            <h3 class="text-xl font-medium mb-6">Mengapa Memilih Jasa Tukang Gypsum Ali Karya Nusantara?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="feature-box">
+                    <h4>Pengalaman & Keahlian</h4>
+                    <p>Tim kami terdiri dari tukang gypsum berpengalaman dengan keahlian tinggi dalam pemasangan berbagai jenis plafon dan partisi gypsum.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Material Berkualitas</h4>
+                    <p>Kami hanya menggunakan material gypsum berkualitas tinggi yang tahan lama dan aman untuk kesehatan keluarga Anda.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Harga Bersaing</h4>
+                    <p>Dapatkan layanan profesional dengan harga yang kompetitif dan transparan tanpa biaya tersembunyi.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Garansi Pekerjaan</h4>
+                    <p>Setiap proyek yang kami kerjakan dilengkapi dengan garansi untuk memastikan kepuasan pelanggan.</p>
+                </div>
+            </div>
+            <!-- Akhir Bagian "Mengapa Memilih Kami" -->
+
+            <h3 class="text-xl font-medium mb-3">Layanan Pemasangan Gypsum yang Kami Tawarkan</h3>
+            <ul class="list-disc ml-6 mb-4 service-list">
+                <li><strong class="text-blue-600">Plafon Gypsum:</strong> Pemasangan plafon gypsum dengan berbagai desain dan model sesuai kebutuhan.</li>
+                <li><strong class="text-blue-600">Partisi Gypsum:</strong> Pembuatan sekat ruangan dengan material gypsum yang rapi dan kokoh.</li>
+                <li><strong class="text-blue-600">Drop Ceiling:</strong> Desain plafon bertingkat untuk menambah nilai estetika ruangan.</li>
+                <li><strong class="text-blue-600">Lis Profil Gypsum:</strong> Pemasangan lis profil untuk mempercantik sudut pertemuan dinding dan plafon.</li>
+                <li><strong class="text-blue-600">Dekorasi Gypsum Custom:</strong> Pembuatan berbagai ornamen dan dekorasi khusus dari material gypsum.</li>
+                <li><strong class="text-blue-600">Perbaikan & Renovasi:</strong> Layanan perbaikan plafon atau partisi gypsum yang rusak.</li>
+            </ul>
+
+            <h3 class="text-xl font-medium mb-3">Proses Pengerjaan Pemasangan Gypsum</h3>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">Konsultasi Awal:</strong> Kami melakukan diskusi untuk memahami kebutuhan dan keinginan Anda, serta memberikan saran terbaik.</li>
+                <li><strong class="text-blue-600">Survei Lokasi:</strong> Tim kami akan melakukan survei lokasi untuk mengukur dan menilai kondisi area yang akan dipasang gypsum.</li>
+                <li><strong class="text-blue-600">Penawaran Harga Transparan:</strong> Berdasarkan hasil survei, kami akan memberikan penawaran harga yang transparan dan terperinci.</li>
+                <li><strong class="text-blue-600">Pengerjaan Profesional:</strong> Setelah kesepakatan, tim kami akan melaksanakan pemasangan gypsum dengan teliti dan profesional.</li>
+                <li><strong class="text-blue-600">Quality Control Ketat:</strong> Kami melakukan pemeriksaan kualitas menyeluruh untuk memastikan setiap detail sesuai dengan ekspektasi dan standar Ali Karya Nusantara.</li>
+                <li><strong class="text-blue-600">Serah Terima Proyek:</strong> Proyek diserahkan kepada Anda setelah semua pekerjaan selesai dengan sempurna dan Anda puas dengan hasilnya.</li>
+            </ul>
+
+            <h3 class="text-xl font-medium mb-3">Area Layanan Tukang Gypsum Terdekat Kami</h3>
+            <p class="mb-4">Ali Karya Nusantara melayani pemasangan gypsum di berbagai wilayah. Kami adalah <strong class="text-blue-600">tukang gypsum terdekat</strong> yang siap melayani kebutuhan Anda di area:</p>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Jakarta</li>
+                <li>Bogor</li>
+                <li>Depok</li>
+                <li>Tangerang</li>
+                <li>Bekasi</li>
+                <li>Dan Wilayah Sekitarnya</li>
+            </ul>
+
+            <h3 class="text-xl font-medium mb-3">Tips Memilih Tukang Gypsum yang Tepat untuk Proyek Anda</h3>
+            <ul class="list-disc ml-6 mb-4">
+                <li>Periksa portofolio dan ulasan proyek sebelumnya.</li>
+                <li>Pastikan penyedia jasa menggunakan material berkualitas.</li>
+                <li>Tanyakan tentang jaminan atau garansi pekerjaan yang diberikan.</li>
+                <li>Bandingkan penawaran harga dari beberapa penyedia jasa.</li>
+                <li>Cari testimoni dari pelanggan sebelumnya untuk menilai reputasi.</li>
+                <li>Pastikan ada kontrak kerja yang jelas dan terperinci.</li>
+            </ul>
+
+            <h3 class="text-xl font-medium mb-3">Pertanyaan Umum (FAQ) tentang Jasa Tukang Gypsum</h3>
+            <ul class="list-disc ml-6 mb-4">
+                <li><strong class="text-blue-600">Berapa lama waktu yang dibutuhkan untuk pemasangan plafon gypsum?</strong><br>Waktu pengerjaan sangat bervariasi tergantung pada luas area, tingkat kompleksitas desain, dan jenis gypsum. Untuk ruangan standar, biasanya berkisar 3-7 hari kerja.</li>
+                <li><strong class="text-blue-600">Apakah plafon gypsum tahan air?</strong><br>Gypsum standar tidak dirancang untuk area yang sangat lembap atau basah. Namun, Ali Karya Nusantara juga menyediakan gypsum jenis *water resistant* yang cocok untuk area seperti kamar mandi atau dapur.</li>
+                <li><strong class="text-blue-600">Berapa biaya pemasangan gypsum per meter?</strong><br>Biaya pemasangan gypsum bervariasi tergantung pada jenis pekerjaan (plafon, partisi, dekorasi), desain yang dipilih, dan material yang digunakan. Untuk penawaran harga yang akurat sesuai kebutuhan Anda, silakan hubungi kami.</li>
+                <li><strong class="text-blue-600">Apakah Ali Karya Nusantara memberikan garansi?</strong><br>Ya, kami memberikan garansi untuk setiap pekerjaan yang kami lakukan. Periode garansi bervariasi tergantung pada jenis dan skala proyek.</li>
+            </ul>
+
+            <h3 class="text-xl font-medium mb-3">Testimoni Pelanggan Kami</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="testimonial-box">
+                    <p>"Sangat puas dengan hasil kerja Ali Karya Nusantara. Plafon gypsum di rumah saya terpasang dengan rapi dan sesuai dengan desain yang saya inginkan. Pekerjaannya cepat dan bersih."</p>
+                    <p class="testimonial-author">- Budi Santoso, Jakarta</p>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Saya menggunakan jasa Ali Karya Nusantara untuk renovasi kantor. Hasilnya memuaskan dan sesuai dengan budget. Tim sangat profesional dan komunikatif selama proses pengerjaan."</p>
+                    <p class="testimonial-author">- Dewi Lestari, Tangerang</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 text-center">Hubungi Kami Sekarang!</h2>
+            <p class="text-center mb-4">Dapatkan konsultasi gratis dan penawaran terbaik untuk kebutuhan gypsum Anda. Tim Ali Karya Nusantara siap membantu mewujudkan ruangan impian Anda.</p>
+
+            <div class="text-center mb-6">
+                <a href="mailto:alikaryanusantara@gmail.com" class="cta-button">Email Kami: alikaryanusantara@gmail.com</a>
+                <br>
+                <a href="tel:+6281297027100" class="cta-button mt-4">Telepon Kami: 081297027100</a>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2">Kesimpulan</h2>
+            <p class="mb-4">Ali Karya Nusantara adalah pilihan tepat untuk kebutuhan <strong class="text-blue-600">tukang gypsum terdekat</strong> Anda. Dengan kombinasi pengalaman, keahlian, komitmen terhadap penggunaan material berkualitas, serta fokus pada desain modern dan responsif, kami siap memberikan layanan terbaik untuk pemasangan plafon gypsum, partisi, dan berbagai dekorasi gypsum lainnya.</p>
+            <p>Jangan ragu untuk menghubungi kami melalui email: <a href="mailto:alikaryanusantara@gmail.com" class="text-blue-600 hover:underline">alikaryanusantara@gmail.com</a> atau telepon: <a href="tel:+6281297027100" class="text-green-600 hover:underline">081297027100</a> untuk mendapatkan konsultasi gratis dan penawaran terbaik. Kami siap melayani kebutuhan Anda dengan profesional dan hasil yang memuaskan.</p>
+        </div>
+    </div>
+</body>
+</html>
